@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<head>
+    <!-- // <script src="http://fb.me/react-with-addons-0.8.0.min.js"></script> -->
+
+    <script src="{{ url_for('static', filename='lib/react.js') }}"></script>
+    <script src="{{ url_for('static', filename='build/JSXTransformer.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/jquery-2.0.3.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/underscore.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/FileSaver.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/peg-0.8.0.js') }}"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='lib/bootstrap.css') }}"> 
+    <script src="{{ url_for('static', filename='lib/bootstrap.min.js') }}"></script>
+    <style>
+    /* As required by: http://getbootstrap.com/components/#navbar-fixed-top */
+    body { padding-top: 70px; }
+  </style>
+  <style>
+  .parse-rules {
+    width:400px;
+    height:300px;
+  }
+  </style>
+
+  <style>
+  .sidebar-panel {
+    position: fixed;
+  }
+  .node-attr-key {
+    font-weight: bold;
+    border: 1px;
+    padding:3px;
+    background-color:#ccffcc;
+  }
+  .node-children {
+    margin-left:10px;
+  }
+  </style>
+</head>
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Restatement</a>
+      </div>
+      <div class="navbar-header navbar-right">
+        <p class="navbar-text">
+          <a href="#" class="navbar-link">Parser</a>
+        </p>
+      </div>
+      <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+<!--        <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li> -->
+          </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container col-md-6 col-md-offset-3" id="main_container">
+  </div>
+
+  <script type="text/jsx" src="{{ url_for('static', filename='src/parser.js') }}"></script>
+
+</body>
+</html>
